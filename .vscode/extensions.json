@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "nopjmp.fairyfloss",
+    "mgmcdermott.vscode-language-babel",
+    "jpoissonnier.vscode-styled-components",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ],
+  "unwantedRecommendations": []
+}

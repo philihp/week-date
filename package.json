@@ -1,0 +1,50 @@
+{
+  "name": "week-date",
+  "version": "0.0.0",
+  "description": "Parses ISO-week dates strings (e.g. 2020-W09-6) into timestamps",
+  "scripts": {
+    "build": "babel src -d dist",
+    "prepare": "npm run build",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philihp/iso-week-date.git"
+  },
+  "keywords": [],
+  "author": "Philihp Busby <philihp@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/philihp/iso-week-date/issues"
+  },
+  "homepage": "https://github.com/philihp/iso-week-date#readme",
+  "devDependencies": {
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.10.5",
+    "@babel/preset-env": "7.10.4",
+    "@philihp/eslint-config": "3.0.0",
+    "husky": "4.2.5",
+    "jest": "26.1.0",
+    "lint-staged": "10.2.11",
+    "prettier": "2.0.5"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "@philihp"
+    ]
+  },
+  "dependencies": {}
+}
