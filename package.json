@@ -7,6 +7,7 @@
     "prepare": "npm run build",
     "lint": "eslint .",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "main": "./dist/index.js",
@@ -25,7 +26,7 @@
     "@babel/cli": "7.10.5",
     "@babel/core": "7.10.5",
     "@babel/preset-env": "7.10.4",
-    "@philihp/eslint-config": "3.0.0",
+    "@philihp/eslint-config": "3.0.1",
     "husky": "4.2.5",
     "jest": "26.1.0",
     "lint-staged": "10.2.11",
@@ -46,5 +47,7 @@
       "@philihp"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "year-days": "3.0.0"
+  }
 }
