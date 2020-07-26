@@ -1,5 +1,3 @@
-// import setISOWeek from 'date-fns/fp/setISOWeek'
-// import setISODay from 'date-fns/fp/setISODay'
 import days from 'year-days'
 
 const radix = 10
@@ -15,11 +13,8 @@ const woy = ([, sWoy]) => Number.parseInt(sWoy.slice(1), radix)
 const dow = ([, , sDow]) => Number.parseInt(sDow, radix)
 
 const doy = (y, d) => {
-  if (d < 1) {
-    return d + days(y - 1)
-  }
   if (d > days(y)) {
-    return d - days(y)
+    return d - 7
   }
   return d
 }
