@@ -28,7 +28,7 @@
     "@babel/preset-env": "7.10.4",
     "@philihp/eslint-config": "3.0.1",
     "husky": "4.2.5",
-    "jest": "26.1.0",
+    "jest": "29.7.0",
     "lint-staged": "10.2.11",
     "prettier": "2.0.5"
   },
