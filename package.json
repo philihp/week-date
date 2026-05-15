@@ -24,6 +24,9 @@
   ],
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "bugs": {
     "url": "https://github.com/philihp/week-date/issues"
   },
