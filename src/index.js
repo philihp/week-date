@@ -10,7 +10,6 @@ const woy = ([, sWoy]) => Number.parseInt(sWoy.slice(1), radix)
 
 const dow = ([, , sDow]) => Number.parseInt(sDow, radix)
 
-// part of zeller's confluence
 const daysSince = (y) =>
   365 * (y - 1970) +
   Math.floor((y - 1969) / 4) -
@@ -23,7 +22,7 @@ const isoDowOfJan4 = (y) => {
   return d === 0 ? 7 : d
 }
 
-export const parse = (input) => {
+const parse = (input) => {
   const date = input.split('-')
   const y = year(date)
   const d = woy(date) * 7 + dow(date) - isoDowOfJan4(y) - 4
@@ -32,4 +31,4 @@ export const parse = (input) => {
   )
 }
 
-export default { parse }
+module.exports = { parse }

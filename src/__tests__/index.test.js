@@ -1,4 +1,4 @@
-import { parse } from '..'
+const { parse } = require('..')
 
 describe('parse', () => {
   describe('1 <= d <= days(y)', () => {
