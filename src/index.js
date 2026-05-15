@@ -1,5 +1,3 @@
-import days from 'year-days'
-
 const radix = 10
 const hoursPerDay = 24
 const minutesPerDay = 60
@@ -12,13 +10,6 @@ const woy = ([, sWoy]) => Number.parseInt(sWoy.slice(1), radix)
 
 const dow = ([, , sDow]) => Number.parseInt(sDow, radix)
 
-const doy = (y, d) => {
-  if (d > days(y)) {
-    return d - 7
-  }
-  return d
-}
-
 // part of zeller's confluence
 const daysSince = (y) =>
   365 * (y - 1970) +
@@ -26,16 +17,19 @@ const daysSince = (y) =>
   Math.floor((y - 1901) / 100) +
   Math.floor((y - 1601) / 400)
 
-const dowOfJan4 = (y) => new Date(y, january, 4).getDay()
+// ISO weekday: Mon=1..Sun=7 (JS getDay returns Sun=0)
+const isoDowOfJan4 = (y) => {
+  const d = new Date(y, january, 4).getDay()
+  return d === 0 ? 7 : d
+}
 
 export const parse = (input) => {
   const date = input.split('-')
   const y = year(date)
-  const d = woy(date) * 7 + dow(date) - dowOfJan4(y) - 4
-  const dd = doy(y, d)
+  const d = woy(date) * 7 + dow(date) - isoDowOfJan4(y) - 4
   return (
-    (dd + daysSince(y)) * hoursPerDay * minutesPerDay * secondsPerMinute * 1000
+    (d + daysSince(y)) * hoursPerDay * minutesPerDay * secondsPerMinute * 1000
   )
 }
 
-export default undefined
+export default { parse }
