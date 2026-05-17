@@ -1,6 +1,6 @@
 {
   "name": "week-date",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Parses ISO-week dates strings (e.g. 2020-W09-6) into timestamps",
   "scripts": {
     "build": "node build.mjs",

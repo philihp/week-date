@@ -5,7 +5,7 @@
 
 # ISO Week Date Parser
 
-The built-in Date.parse in Node.js won't parse ISO 8601 Week-Date format, sadly. Here's a function which will. Use it as a drop-in replacement for Date.parse.
+The built-in Date.parse in Node.js won't parse ISO 8601 Week-Date format. Here's a function which will. Use it as a drop-in replacement for Date.parse.
 
 ## Installation
 
