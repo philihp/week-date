@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "test": "node --test",
     "test:watch": "node --test --watch",
-    "test:coverage": "node --test --experimental-test-coverage"
+    "test:coverage": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info --test-reporter=spec --test-reporter-destination=stdout"
   },
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

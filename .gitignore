@@ -2,6 +2,7 @@ dist/
 node_modules/
 .nyc_output/
 coverage/
+lcov.info
 *.swp
 package-lock.json
 .node-version
