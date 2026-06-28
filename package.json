@@ -42,7 +42,7 @@
   "homepage": "https://github.com/philihp/week-date#readme",
   "devDependencies": {
     "@philihp/eslint-config": "6.1.0",
-    "prettier": "3.8.5"
+    "prettier": "3.9.1"
   },
   "eslintConfig": {
     "extends": [
